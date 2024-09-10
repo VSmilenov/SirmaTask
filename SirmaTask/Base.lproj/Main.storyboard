@@ -1,24 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SirmaTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amz-Km-Vgy">
+                                <rect key="frame" x="0.0" y="357.66666666666669" width="393" height="162.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="Hno-S0-Vvj"/>
+                                    <constraint firstAttribute="height" constant="162" id="d9k-35-Kmr"/>
+                                </constraints>
+                            </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oLw-Yh-YWW">
+                                <rect key="frame" x="16" y="310.66666666666669" width="176" height="32"/>
+                                <segments>
+                                    <segment title="BG"/>
+                                    <segment title="EN"/>
+                                </segments>
+                                <connections>
+                                    <action selector="languageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="n4j-ax-dgZ"/>
+                                </connections>
+                            </segmentedControl>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="s5J-mn-RNs">
+                                <rect key="frame" x="0.0" y="72" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xux-We-mdH"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s5J-mn-RNs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="H8e-yd-GNJ"/>
+                            <constraint firstItem="amz-Km-Vgy" firstAttribute="top" secondItem="oLw-Yh-YWW" secondAttribute="bottom" constant="16" id="OJ1-1F-ues"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="s5J-mn-RNs" secondAttribute="leading" id="QkA-aY-zzj"/>
+                            <constraint firstItem="amz-Km-Vgy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="StW-3R-Jbe"/>
+                            <constraint firstItem="amz-Km-Vgy" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="cz1-c4-aRU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oLw-Yh-YWW" secondAttribute="trailing" constant="201" id="g5k-AG-Mbh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s5J-mn-RNs" secondAttribute="trailing" id="r5c-et-fom"/>
+                            <constraint firstItem="oLw-Yh-YWW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yOf-6S-PSc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="byNameSearchBar" destination="s5J-mn-RNs" id="qWh-di-exu"/>
+                        <outlet property="countryPickerView" destination="amz-Km-Vgy" id="Q1C-Xo-Dwk"/>
+                        <outlet property="languageSegmentedControl" destination="oLw-Yh-YWW" id="znG-jV-zP0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="0.76335877862595414" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -16,6 +16,10 @@
 		E984D1E32C8DE81100825C61 /* SirmaTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984D1E22C8DE81100825C61 /* SirmaTaskTests.swift */; };
 		E984D1ED2C8DE81100825C61 /* SirmaTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984D1EC2C8DE81100825C61 /* SirmaTaskUITests.swift */; };
 		E984D1EF2C8DE81100825C61 /* SirmaTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984D1EE2C8DE81100825C61 /* SirmaTaskUITestsLaunchTests.swift */; };
+		E984D1FE2C8DE85B00825C61 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E984D1FD2C8DE85B00825C61 /* Alamofire */; };
+		E984D2002C8DE88900825C61 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984D1FF2C8DE88900825C61 /* RequestModel.swift */; };
+		E984D2022C8DE89E00825C61 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984D2012C8DE89E00825C61 /* ResponseModel.swift */; };
+		E984D2042C8DE8BD00825C61 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984D2032C8DE8BD00825C61 /* CountryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,9 @@
 		E984D1E82C8DE81100825C61 /* SirmaTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SirmaTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E984D1EC2C8DE81100825C61 /* SirmaTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirmaTaskUITests.swift; sourceTree = "<group>"; };
 		E984D1EE2C8DE81100825C61 /* SirmaTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SirmaTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E984D1FF2C8DE88900825C61 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		E984D2012C8DE89E00825C61 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		E984D2032C8DE8BD00825C61 /* CountryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E984D1FE2C8DE85B00825C61 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +91,7 @@
 				E984D1E12C8DE81100825C61 /* SirmaTaskTests */,
 				E984D1EB2C8DE81100825C61 /* SirmaTaskUITests */,
 				E984D1C92C8DE81000825C61 /* Products */,
+				E984D1FC2C8DE85B00825C61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +111,9 @@
 				E984D1CB2C8DE81000825C61 /* AppDelegate.swift */,
 				E984D1CD2C8DE81000825C61 /* SceneDelegate.swift */,
 				E984D1CF2C8DE81000825C61 /* ViewController.swift */,
+				E984D1FF2C8DE88900825C61 /* RequestModel.swift */,
+				E984D2012C8DE89E00825C61 /* ResponseModel.swift */,
+				E984D2032C8DE8BD00825C61 /* CountryService.swift */,
 				E984D1D12C8DE81000825C61 /* Main.storyboard */,
 				E984D1D42C8DE81100825C61 /* Assets.xcassets */,
 				E984D1D62C8DE81100825C61 /* LaunchScreen.storyboard */,
@@ -127,6 +139,13 @@
 			path = SirmaTaskUITests;
 			sourceTree = "<group>";
 		};
+		E984D1FC2C8DE85B00825C61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +162,9 @@
 			dependencies = (
 			);
 			name = SirmaTask;
+			packageProductDependencies = (
+				E984D1FD2C8DE85B00825C61 /* Alamofire */,
+			);
 			productName = SirmaTask;
 			productReference = E984D1C82C8DE81000825C61 /* SirmaTask.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +237,9 @@
 				Base,
 			);
 			mainGroup = E984D1BF2C8DE81000825C61;
+			packageReferences = (
+				E984D1FB2C8DE84700825C61 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = E984D1C92C8DE81000825C61 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E984D2042C8DE8BD00825C61 /* CountryService.swift in Sources */,
 				E984D1D02C8DE81000825C61 /* ViewController.swift in Sources */,
 				E984D1CC2C8DE81000825C61 /* AppDelegate.swift in Sources */,
 				E984D1CE2C8DE81000825C61 /* SceneDelegate.swift in Sources */,
+				E984D2022C8DE89E00825C61 /* ResponseModel.swift in Sources */,
+				E984D2002C8DE88900825C61 /* RequestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +635,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E984D1FB2C8DE84700825C61 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E984D1FD2C8DE85B00825C61 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E984D1FB2C8DE84700825C61 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E984D1C02C8DE81000825C61 /* Project object */;
 }
